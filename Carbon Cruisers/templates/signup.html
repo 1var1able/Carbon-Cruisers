@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://lh3.googleusercontent.com/1WdN2rg-KJKaBoUQSYYoqXsd2hWN_1M8lhSOVhM8nHZTgZMbLxVKn_nfymfCoLxZV9P5po_mEVQb0bs8349hBryBwYA=s800-rw');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .signup-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+        }
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .signup-container input[type="text"],
+        .signup-container input[type="password"],
+        .signup-container input[type="email"],
+        .signup-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .signup-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            border-radius: 5;
+        }
+        .signup-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .google-signup {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="/" method="post">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="submit" value="Sign Up" href = "/">
+        </form>
+        <div class="google-signup">
+            <p>Or sign up with</p>
+            <!-- Add your Google signup button here -->
+            <button onclick="alert('Signing up with Google')"><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAABFFBMVEX///9Bdd//ZBpZw2r/2i3wOAAApmw8ct5wk+UApGz/ZxvvNABdxWo6g/R5qPdCdOFAh/YAp2n/XQD/YRL/Xxr/2R47e9dTwWX//Oz/kCH/7aP//fT42S86fdPyTBv+5NnS4fxGe+IQnoT/tJT/1cP+8u//bSn929D/4Vz/8br/5Gn/6Yr/99H/7qz/4FEpfvNfi+b/+eGJtPj/3UL/5XSYy1aW16BnyHajzFPU796p3rDB58fO7dMNoH+3yfT/onn/jVj/gET2cUf6lnX8wa/2fmD4o5XyVzf5sKLzUin3inD1Zj//l2z/dzf2WyPwHQDm7v2juO7E1fh9rt9ewJOm38Lo9uo7u4J/0Is4g86BzaeXzrTT1iN6AAAEa0lEQVRogdXXXUPaSBQG4NEkxJotLUkpdnWJlAB221rbWr6kICVorVJSFwPr/v//0ZkQMMmc+QjCxZ4Lb4SHw3smMwNCElWxnXLvvF+t7hqaphW/DVzb3pd5o7Cc8mBkmaZlWdvbAW4YxnisDS/cx8q1Xn8Xw9thBXhQ+BO0y2/O6rLt9iNwHJ9/wLj43V6JrpT7cZnCiT+++lFJ33XZpGgAD/IZpOzeHZmUDOPE19wUa8c+t+iu2Tju/lq6edcC22bjhL+Qs2+24bZ5ONaHEtHYfVbbXBzzV8JV78CTlMA1oyhYlE6VGYkQ18b81l3GKpHEubuNI7AFsVzxYhFkIsCNyxrHtvsim4cbRZ6NznnrRIQbRe40e2Kb84Recp9/V0yzcUEmlV1h4PigswxyAqWcJd5QBKGY5u7o/Obm+rqIDwgj2Td/T3QEsnnj2HaFlG3XLn6Ox5EvIJgl2jt+9YJNVwfUu8tDzVhmItjL3+dVlm6ZPbAxdzhPRzBLhPZVXLBujZjvdYo4G+NaYKM/8yzdLHP2i8pAM4ai823vSFVB3TIFt6paTXiveJNXQd2qPuJGtai/F3hCN9dg7y3tuC7KRKreRvCIbpXXYKNjVQV0a5T+DkjXO1WFdFO0fqXqfR7Szd467HjkC92qQo0fZnfkK+uRPStpE90cQPaHp3qKOvHQR9rGOrjEPz19vpWidA+9o1IJdCjAbEr8Nty0EpU/XQf+CZgnwd+sA99Bp1Aq6sc14FslBCwWVT1eE/4Zwo/2NofnT8GfIGnxLQQ1/v/ANxrLBge6tdmluNGHaKOP/0Y3LnjLba4D74KHxcGXQgfA0x8W0DHXVAp1AGcdcyzdAw7ogy+KojRakA4f0Cdw4zsecLUgNtw6o7Jg7/ovRF+KmkpQBah1sG4ZuXTJP2OhB5kEeEPS9kpw4y898t9Y6Asb6+3HhEIeIVKRK/TBg431Mxn7FyMUfLEI6uHyH7WxDi32RHVZdil8wfJnS1OJ4w2h3oXpcK0EuRzRmcx1UTKsTHDjh4vXzDcvyhZN1f/nGbPx7PJV5EfuQROwSTTM9d7JfH3J0nXv4XX4KYX6nkdTB/nOJJfJff0L1iONk0s63PecV+rUYO8wjSv3GuxdL3nRF3fYdtC9Uj/zfX8f4T+t1t00F9BEfwLpejfeSr3A5YnfmM3qkymGF/K8dzoZ/STxPff5dvgBhSeZZOXoqeqHyRTPJHTlDxqnp7p8fiLVFgTDwpNTDXesRM3EOojHp5pYKYvyG0IdxqNT1Uu3kI1QS6gz8OhUu7CN9RU7f5hqcoXHlwy/dyYeThVaKNLJsPFgqry+xToHx73/K7DxmuGtSC6ekbmMcLYZXiwTCRrxxsoZ6J2cHUQD80x86svauDrwXBmPv3zbYfPtAtA9vHHdp2k7rDYdDo3npqvQQfdJPonnMner0UG16g0lkk8Ex6fddCJ9zWZVp12fkQ8oRHB8jN7/l3KKrPL9zll7Nms0Anw6uW/5Umn8BnCmsZjCDVm4AAAAAElFTkSuQmCC" width = 70px>
+              
+            </button>
+        </div>
+    </div>
+</body>
+</html

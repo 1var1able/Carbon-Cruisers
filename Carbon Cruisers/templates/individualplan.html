@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Travel Plan Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://media.istockphoto.com/id/1300296030/photo/tropical-beach-palm-trees-sea-wave-and-white-sand.jpg?s=612x612&w=0&k=20&c=6xdlJDxSp5FVUpQC7AOt3ooHYPd3-gTQNF6lmwX5krk=') center/cover fixed;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: auto;
+            align-content: center;
+            
+        }
+
+        #travel-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="travel-form">
+        <h1 style="text-align: center">Individual Plan Generator</h1>
+
+        <form>
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required>
+
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="from-date">From Date:</label>
+            <input type="date" id="from-date" name="from-date" required>
+
+            <label for="to-date">To Date:</label>
+            <input type="date" id="to-date" name="to-date" required>
+
+            <label for="from-time">From Time:</label>
+            <input type="time" id="from-time" name="from-time" required>
+
+            <label for="to-time">To Time:</label>
+            <input type="time" id="to-time" name="to-time" required>
+
+            <button type="button" onclick="generatePlan()">Plan My Journey</button>
+        </form>
+
+        <div id="travel-result" style="margin-top: 30px;"></div>
+    </div>
+
+    <script>
+        function generatePlan() {
+            // Implement the logic to generate and display the travel plan based on user input
+            var plan = "<h2>Your Travel Plan:</h2>";
+            plan += "<p>Cab arrives at your home at " + document.getElementById("from-time").value + "</p>";
+            plan += "<p>Cab takes you to the railway station</p>";
+            plan += "<p>Carbon Curioser cab picks you up at the destination</p>";
+            plan += "<p>You stay at a beautiful hotel within your budget</p>";
+
+            document.getElementById("travel-result").innerHTML = plan;
+        }
+    </script>
+
+</body>
+
+</html>

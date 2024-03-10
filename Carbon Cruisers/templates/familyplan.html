@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Travel Plan</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://media.istockphoto.com/id/1300296030/photo/tropical-beach-palm-trees-sea-wave-and-white-sand.jpg?s=612x612&w=0&k=20&c=6xdlJDxSp5FVUpQC7AOt3ooHYPd3-gTQNF6lmwX5krk=') no-repeat center center fixed;
+      background-size: cover;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #travelForm {
+      background-color: rgba(173, 216, 230, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      width: 500px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      padding-right: 30px;
+    }
+
+    input {
+      width: 96%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="travelForm">
+  <h2>Family Travel Plan</h2>
+  <form>
+    <label for="from">From:</label>
+    <input type="text" id="from" name="from" required>
+
+    <label for="to">To:</label>
+    <input type="text" id="to" name="to" required>
+
+    <label for="budget">Budget:</label>
+    <input type="number" id="budget" name="budget" required>
+
+    <label for="fromDate">From Date:</label>
+    <input type="date" id="fromDate" name="fromDate" required>
+
+    <label for="toDate">To Date:</label>
+    <input type="date" id="toDate" name="toDate" required>
+
+    <label for="fromTime">From Time:</label>
+    <input type="time" id="fromTime" name="fromTime" required>
+
+    <label for="toTime">To Time:</label>
+    <input type="time" id="toTime" name="toTime" required>
+
+    <label for="numCouples">Number of Couples:</label>
+    <input type="number" id="numCouples" name="numCouples" required>
+
+    <label for="numKids">Number of Kids:</label>
+    <input type="number" id="numKids" name="numKids" required>
+
+    <button type="submit">Plan My Journey</button>
+  </form>
+</div>
+
+</body>
+</html>
